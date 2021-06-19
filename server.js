@@ -7,4 +7,4 @@ app.use(serveStatic(path.join(__dirname, 'dist')))
 
 var port = process.env.PORT || 3000
 app.listen(port)
-console.log('server started' + port)
+console.log('server started ' + port)
