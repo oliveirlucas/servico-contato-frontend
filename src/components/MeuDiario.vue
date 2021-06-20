@@ -29,7 +29,9 @@
                     <v-expansion-panel-content>
                         <div class="pa-1">
                         <v-row>
-                            {{ registroDiario.registro}}
+                            <div class="mb-5">
+                                {{ registroDiario.registro}}
+                            </div>
                         </v-row>   
                         <v-row class="float-right">
                             <v-dialog
@@ -39,7 +41,7 @@
                             v-model="dialog"
                             >
                                 <template v-slot:activator="{ on, attrs }">
-                                    <v-btn v-on="on" v-bind="attrs" small color="primary" @click="editarRegistro(registroDiario.registro)">Atualizar</v-btn>
+                                    <v-btn v-on="on" v-bind="attrs" class="mb-2" small color="primary" @click="editarRegistro(registroDiario.registro)">Atualizar</v-btn>
                                 </template>
                                 <template>
                                 <v-card>
