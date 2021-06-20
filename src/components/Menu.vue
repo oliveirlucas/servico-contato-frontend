@@ -138,53 +138,114 @@
     </v-row>
     <v-row>
       <v-col cols="6">
-        <v-btn
-          color="blue-grey darken-1"
-          class="ma-2 white--text"
-          fab
-          tile
-          text
-          width="150px"
-          height="150px"
-        >
-          <div>
-            <v-row>
-                <v-img
-                  width="20px"
-                  src="../assets/checklist.png"
-                ></v-img>
-            </v-row>
-            <br>
-            <v-row class="justify-center">
-              <span class="mt-3 text-capitalize"> Check List </span>
-            </v-row>
-          </div>
-        </v-btn>
+        <v-dialog
+          transition="dialog-top-transition"
+          scrollable
+          max-width="600"
+          >
+            <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              color="blue-grey darken-1"
+              class="ma-2 white--text"
+              fab
+              tile
+              text
+              v-bind="attrs"
+              v-on="on"
+              width="150px"
+              height="150px"
+            >
+              <div>
+                <v-row>
+                  <div class="mt-3">
+                    <v-img
+                      width="85px"
+                      src="../assets/checklist.png"
+                    ></v-img>
+                  </div>
+                </v-row>
+                <v-row class="justify-center">
+                  <span class="mt-3 mr-2 text-capitalize"> Check List  </span>
+                </v-row>
+              </div>
+            </v-btn>
+            </template>
+            <template v-slot:default="dialog">
+              <v-card>
+                <v-toolbar
+                  color="primary"
+                  dark
+                >Check List</v-toolbar>
+                <v-divider></v-divider>
+                <v-card-text>
+                <div class="text-subtitle-2 pa-1">
+                <check-list />
+                </div>
+              </v-card-text>
+              <v-card-actions class="justify-end">
+                <v-btn
+                  text
+                  @click="dialog.value = false"
+                >Fechar</v-btn>
+              </v-card-actions>
+            </v-card>
+          </template>
+        </v-dialog>
       </v-col>
       <v-col cols="6">
-        <v-btn
-          color="blue-grey darken-1"
-          class="ma-2 white--text"
-          fab
-          tile
-          text
-          width="150px"
-          height="150px"
-        >
-          <div>
-            <v-row>
-                <v-img
-                  class="mt-2"
-                  width="20px"
-                  src="../assets/diario.png"
-                ></v-img>
-            </v-row>
-            <br>
-            <v-row class="justify-center">
-              <span class="mt-4 text-capitalize"> Meu diário </span>
-            </v-row>
-          </div>
-        </v-btn>
+        <v-dialog
+          transition="dialog-top-transition"
+          scrollable
+          max-width="600"
+          >
+            <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              color="blue-grey darken-1"
+              class="ma-2 white--text"
+              fab
+              tile
+              text
+              v-bind="attrs"
+              v-on="on"
+              width="150px"
+              height="150px"
+            >
+              <div>
+                <v-row>
+                  <div class="mt-3 ml-2">
+                    <v-img
+                      width="95px"
+                      src="../assets/diario.png"
+                    ></v-img>
+                  </div>
+                </v-row>
+                <v-row class="justify-center">
+                  <span class="mt-4 ml-4 text-capitalize"> Meu diário  </span>
+                </v-row>
+              </div>
+            </v-btn>
+            </template>
+            <template v-slot:default="dialog">
+              <v-card>
+                <v-toolbar
+                  color="primary"
+                  dark
+                >Meu diário</v-toolbar>
+                <v-divider></v-divider>
+                <v-card-text>
+                <div class="text-subtitle-2 pa-1">
+                <MeuDiario />
+                </div>
+              </v-card-text>
+              <v-card-actions class="justify-end">
+                <v-btn
+                  text
+                  @click="dialog.value = false"
+                >Fechar</v-btn>
+              </v-card-actions>
+            </v-card>
+          </template>
+        </v-dialog>
       </v-col>
     </v-row>
     <v-row>
@@ -208,7 +269,7 @@
             >
               <div>
                 <v-row>
-                  <div class="mt-3">
+                  <div class="mt-5">
                     <v-img
                       width="140px"
                       src="../assets/acalmar.png"
@@ -216,7 +277,7 @@
                   </div>
                 </v-row>
                 <v-row class="justify-center">
-                  <span class="mt-3 text-capitalize"> Me acalmar  </span>
+                  <span class="mt-5 text-capitalize"> Me acalmar  </span>
                 </v-row>
               </div>
             </v-btn>
@@ -230,7 +291,7 @@
                 <v-divider></v-divider>
                 <v-card-text>
                 <div class="text-subtitle-2 pa-1">
-                <Playlist />
+                <playlist />
                 </div>
               </v-card-text>
               <v-card-actions class="justify-end">
@@ -244,30 +305,59 @@
         </v-dialog>
       </v-col>
       <v-col cols="6">
-        <v-btn
-          color="blue-grey darken-1"
-          class="ma-2 white--text"
-          fab
-          tile
-          text
-          width="150px"
-          height="150px"
-        >
-          <div>
-            <v-row>
+        <v-dialog
+          transition="dialog-top-transition"
+          scrollable
+          max-width="600"
+          >
+            <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              color="blue-grey darken-1"
+              class="ma-2 white--text"
+              fab
+              tile
+              text
+              v-bind="attrs"
+              v-on="on"
+              width="150px"
+              height="150px"
+            >
               <div>
-                <v-img
-                  width="100px"
-                  src="../assets/tempo.png"
-                ></v-img>
+                <v-row>
+                  <div class="mt-3 ml-2">
+                    <v-img
+                      width="100px"
+                      src="../assets/tempo.png"
+                    ></v-img>
+                  </div>
+                </v-row>
+                <v-row class="justify-center">
+                  <span class="mt-3 text-capitalize"> Tempo de uso  </span>
+                </v-row>
               </div>
-            </v-row>
-            <br>
-            <v-row class="justify-center">
-              <span class="mt-4 text-capitalize"> Tempo de uso </span>
-            </v-row>
-          </div>
-        </v-btn>
+            </v-btn>
+            </template>
+            <template v-slot:default="dialog">
+              <v-card>
+                <v-toolbar
+                  color="primary"
+                  dark
+                >Tempo de uso</v-toolbar>
+                <v-divider></v-divider>
+                <v-card-text>
+                <div class="text-subtitle-2 pa-1">
+                <TempoDeUso />
+                </div>
+              </v-card-text>
+              <v-card-actions class="justify-end">
+                <v-btn
+                  text
+                  @click="dialog.value = false"
+                >Fechar</v-btn>
+              </v-card-actions>
+            </v-card>
+          </template>
+        </v-dialog>
       </v-col>
     </v-row>
   </v-container>
@@ -277,10 +367,17 @@
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
 import Playlist from "./Playlist.vue";
+import CheckList from "./CheckList.vue";
+import TempoDeUso from "./TempoDeUso.vue";
+import MeuDiario from "./MeuDiario.vue";
+
 
 @Component({
   components:{
-    Playlist
+    Playlist,
+    CheckList,
+    TempoDeUso,
+    MeuDiario
   },
 })
 
