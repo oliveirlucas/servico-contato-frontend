@@ -103,7 +103,7 @@
                 </v-row>
                 <br>
                 <v-row class="justify-center">
-                  <span class="mt-3 text-capitalize"> Dúvida </span>
+                  <span class="mt-3 text-capitalize"> Dúvidas </span>
                 </v-row>
               </div>
             </v-btn>

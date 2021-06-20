@@ -96,13 +96,12 @@ export default class MeuDiario extends Vue {
     }
 
     public carregarlista(){
-        this.listaDeRegistro.push({ data: "domingo, 20 junho 2021", registro: "Hoje meu dia foi tranquilo."});
-        this.listaDeRegistro.push({ data: "segunda, 21 junho 2021", registro: "Hoje meu dia foi tranquilo."});
-        this.listaDeRegistro.push({ data: "terça, 22 junho 2021", registro: "Hoje meu dia foi tranquilo."});
-        this.listaDeRegistro.push({ data: "quarta, 23 junho 2021", registro: "Hoje meu dia foi tranquilo."});
-        this.listaDeRegistro.push({ data: "quinta, 24 junho 2021", registro: "Hoje meu dia foi tranquilo."});
-        this.listaDeRegistro.push({ data: "sexta, 25 junho 2021", registro: "Hoje meu dia foi tranquilo."});
-        this.listaDeRegistro.push({ data: "sábado, 26 junho 2021", registro: "Hoje meu dia foi tranquilo."});
+        this.listaDeRegistro.push({ data: "domingo, 20 junho 2021", registro: "Neste dia houve um almoço de família na casa dos meus avós e fiquei desconfortável com a presença de algumas pessoas."});
+        this.listaDeRegistro.push({ data: "segunda, 21 junho 2021", registro: "Foi um dia comum, muita pressão no trabalho e fiquei ansioso com isso... mas consegui lidar."});
+        this.listaDeRegistro.push({ data: "terça, 22 junho 2021", registro: "Hoje o dia foi tranquilo."});
+        this.listaDeRegistro.push({ data: "quarta, 23 junho 2021", registro: "Não tive uma boa noite de sono e por isso me atrasei para o trabalho."});
+        this.listaDeRegistro.push({ data: "quinta, 24 junho 2021", registro: "Tudo tranquilo até o momento."});
+        this.listaDeRegistro.push({ data: "sexta, 25 junho 2021", registro: "Fui convidado pelos colegas do trabalho à um happy hour, porém não sabia como me comportar na preseça de mais pessoas."});
     }
 
     public cadastrarRegistro(){
